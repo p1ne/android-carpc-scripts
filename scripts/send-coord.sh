@@ -34,7 +34,8 @@ fi
 decLat=`echo $decLat4 | cut -c1,2`.`echo $decLat4 | cut -c3-`
 decLon=`echo $decLon4 | cut -c1,2,3`.`echo $decLon4 | cut -c4-`
 
-url="http://maps.yandex.ru/?ll=$decLon%2C$decLat%26z=14"
+#url="http://maps.yandex.ru/?ll=$decLon%2C$decLat%26z=14"
+url="http://static-maps.yandex.ru/1.x/?l=map&pt=$decLon%2C$decLat%26z=16"
 
 while ! ping -c1 qpush.me &>/dev/null; do :; done
 
