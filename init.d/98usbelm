@@ -1,0 +1,7 @@
+#! /system/bin/sh
+
+insmod /system/lib/modules/ftdi_sio.ko
+busybox chmod 666 /dev/ttyUSB1
+sleep 1
+busybox stty -F /dev/ttyUSB1 38400 raw
+busybox chmod 666 /dev/ttyUSB1
