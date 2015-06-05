@@ -1,6 +1,6 @@
 #! /system/bin/sh
 
-# Set your own qpush.me user data in pre-last line of script in "name" and "code" fields
+# Set your own www.notifymyandroid.com apikey in pre-last line of script
 
 gpsSource=/dev/ttyUSB0
 
@@ -37,16 +37,16 @@ decLon=`echo $decLon4 | cut -c1,2,3`.`echo $decLon4 | cut -c4-`
 #url="http://maps.yandex.ru/?ll=$decLon%2C$decLat%26z=14"
 url="http://static-maps.yandex.ru/1.x/?l=map&pt=$decLon%2C$decLat%26z=16"
 
-while ! ping -c1 qpush.me &>/dev/null; do :; done
+while ! ping -c1 www.notifymyandroid.com &>/dev/null; do :; done
 
-cat | nc qpush.me 80 << EOF
-POST /pusher/push_site/ HTTP/1.1
+cat | nc www.notifymyandroid.com 80 << EOF
+POST /publicapi/notify/ HTTP/1.1
 User-Agent: curl/7.26.0
-Host: qpush.me
+Host: www.notifymyandroid.com
 Accept: */*
-Content-Length: 110
+Content-Length: 135
 Content-Type: application/x-www-form-urlencoded
 
-name=<yourname>&code=<yourcode>&sig=&cache=false&msg[text]=$url
+apikey=<apikey>&application=Car&event=Car%20coordinates&description=Car%20Coordinates&url=$url
 EOF
 
