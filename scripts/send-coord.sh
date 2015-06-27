@@ -44,9 +44,10 @@ POST /publicapi/notify/ HTTP/1.1
 User-Agent: curl/7.26.0
 Host: www.notifymyandroid.com
 Accept: */*
-Content-Length: 135
+Content-Length: 195
 Content-Type: application/x-www-form-urlencoded
 
-apikey=<apikey>&application=Car&event=Car%20coordinates&description=Car%20Coordinates&url=$url
+apikey=<key>&application=DasAuto&event=Coordinates&description=Coordinates&url=$url
+
 EOF
 
