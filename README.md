@@ -1,7 +1,7 @@
 AndroidCarPCScripts
 ===================
 
-Scripts for some CarPC automation on rooted Android CarPC
+Scripts for some CarPC automation on rooted Android CarPC based on RK3288 chipset (Rikomagic MK902II)
 
 * init.d - directory contains GPS and ELM327 scanner module initialization scripts run by init.d and call for scripts from /etc/scripts directory
 * scripts - custom scripts directory to be put in /etc. Placed separately by reason
